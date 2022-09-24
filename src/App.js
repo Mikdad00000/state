@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [counter, setCounter] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p className='text-4xl'>{counter}</p>
+      <button
+        type='button'
+        className='w-[25%] h-[25%] border bg-yellow-500'
+        onClick={() => setCounter(counter + 10)}>
+        donate 10 taka
+      </button>
+      <button
+        type='button'
+        className='w-[25%] h-[25%] border bg-yellow-500'
+        onClick={() => setCounter(counter + 15)}>
+        donate 15 taka
+      </button>
+      <button
+        type='button'
+        className='w-[25%] h-[25%] border bg-red-500'
+        onClick={() => setCounter(counter - 50)}>
+        spend 50 taka
+      </button>
     </div>
   );
 }
