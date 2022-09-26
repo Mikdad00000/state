@@ -1,7 +1,7 @@
 import { useState } from "react";
 function Input({ label, value, setValue,type }) {
     return (
-        <div className="flex h-[20%] w-full justify-between m-5 ">
+        <div className="flex h-[5%] w-full justify-between m-5 ">
             <label className="text-2xl ">{label}</label>
             <input
                 type={type || "text"}
@@ -17,9 +17,19 @@ function Form() {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
+    const [users, setUsers] = useState([]);
+    const submit = () => {
+        const user = {
+            name:name,
+            email:email,
+            phone:phone,
+            password:password
+        };
+        setUsers([...users, user]);
+    }
     return (
         <div className="h-screen justify-center w-full">
-            <div className="flex flex-col w-[50%] justify-center h-full  border shadow-md p-5">
+            <div className="flex flex-col w-[50%] justify-center  border shadow-md p-5">
                 <Input
                     label="User Name"
                     value={name}
@@ -38,10 +48,15 @@ function Form() {
                     value={password}
                     setValue={setPassword}
                     type="password"
-                /><p> {name} </p>
-                <p> {email} </p>
-                <p> {phone} </p>
-                <p> {password} </p>
+                />
+                <button 
+                  type="button" 
+                 onClick ={submit}
+                  className="border bg-green-500">
+                    Submit
+                </button>
+                        
+                    <p> {JSON.stringify(users)} </p>
             </div>
         </div>
     )
