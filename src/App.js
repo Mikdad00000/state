@@ -1,13 +1,15 @@
-import Counter from './Counter';
+import Counter from "./Counter";
 import { Routes, Route, Link } from "react-router-dom";
-import Form from './Form';
-import Links from './Links';
+import Form from "./Form";
+import Links from "./Links";
+import Fetch from './Fetch.js'
 function App() {
   return (
     <>
       <Routes>
         <Route path="/form" element={<Form />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/fetch" element={<Fetch />} />
         <Route path="/" element={<Links />} />
       </Routes>
     </>
