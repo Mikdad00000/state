@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 function Counter() {
   const [counter, setCounter] = useState(0);
   return (
@@ -9,7 +9,7 @@ function Counter() {
         className="w-[25%] h-[25%] border bg-yellow-500"
         onClick={() => setCounter(200)}
       >
-    Settle to 200 tk
+        Settle to 200 tk
       </button>
       <button
         type="button"
@@ -36,4 +36,3 @@ function Counter() {
   );
 }
 export default Counter;
-      

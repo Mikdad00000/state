@@ -14,8 +14,14 @@ function Links() {
       <Link to="/time" className="border p-5 m-5">
         Time
       </Link>
-    <Link to="/time" className="border p-5 m-5">
+    <Link to="/queue" className="border p-5 m-5">
         Queue
+      </Link>
+    <Link to="/colourchange" className="border p-5 m-5">
+        ColourChange
+      </Link>    
+    <Link to="/effect" className="border p-5 m-5">
+        Effect
       </Link>
     </div>
   );
